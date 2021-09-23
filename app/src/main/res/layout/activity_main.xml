@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Calculator"
         android:textSize="28sp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         app:layout_constraintBottom_toTopOf="@+id/EnterFirstNumber"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -37,7 +37,7 @@
         android:id="@+id/EnterSecondNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+
         android:ems="10"
         android:hint="Enter Second number"
         android:inputType="textPersonName"
@@ -48,51 +48,61 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="+"
+        android:onClick="plusFunction"
         android:textSize="19sp"
-        android:layout_marginBottom="390dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginBottom="220dp"
+        android:layout_marginStart="50dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterSecondNumber"/>
+
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="-"
+        android:onClick="subFunction"
         android:textSize="19sp"
-        android:layout_marginBottom="390dp"
+        android:layout_marginBottom="220dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterSecondNumber"/>
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="*"
+        android:onClick="mulFunction"
         android:textSize="19sp"
-        android:layout_marginBottom="390dp"
+        android:layout_marginBottom="220dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterSecondNumber"/>
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:text="*"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="220dp"
+        android:text="/"
+        android:onClick="divFunction"
         android:textSize="19sp"
-        android:layout_marginBottom="390dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/EnterSecondNumber"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
